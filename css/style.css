@@ -152,7 +152,7 @@ body {
     font-style: normal;
     font-weight: normal;
 }
-header {
+#cabecalho {
     font-family: Inter, Arial, Helvetica, sans-serif;
     position: absolute;
     top: 0;
@@ -160,15 +160,18 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0;
     z-index: 10;
 }
-.nav-bar {
+ header .nav-bar {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 3rem;
     align-items: center;
     width: 100%;
+    background-color: transparent;
+    /*o materializeque eu usei para o carousel acabou afetando o header e para impedir que ele altere eu fiz essa linha de codigo*/
+    box-shadow: none;
 }
 
 /* Estilos para o título dentro do cabeçalho */
@@ -233,18 +236,19 @@ header {
 .mobile-menu {
     display: none;
 }
-.search {
+header .nav-bar .search {
     position: relative;
     width: 340px;
     height: 30px;
     padding: 0px 10px;
 }
-.search input {
+header .nav-bar .search input {
+    font-size: 13px;
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 94%;
+    height: 2rem;
     color: #ffffff;
     background: transparent;
     border: 1 solid rgba(255, 255, 255, 0.5);
@@ -254,14 +258,16 @@ header {
     backdrop-filter: blur(10px);
 
 }
-.search input::placeholder {
+header .nav-bar .search input::placeholder {
     color: #ffffff;
+    padding: 0 10px 0 45px;
 }
-.search i {
+header .nav-bar .search i {
     position: absolute;
-    top: 24%;
+    top: 19%;
     transform: translate(-50%);
     left: 30px;
+    height: 20px;
     padding-right: 10px;
     color: #ffffff;
     border-right: 1px solid #ffffff;
