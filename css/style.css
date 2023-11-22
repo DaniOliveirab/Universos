@@ -146,6 +146,9 @@ body {
     transition: 0.3s;
     cursor: pointer;
 }
+.sci a:hover {
+    color: var(--primary);
+}
 @font-face {
     font-family: 'Croissant';
     src: url('YoungSerif-Regular.ttf') format(truetype);
